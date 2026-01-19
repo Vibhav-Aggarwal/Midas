@@ -1,0 +1,49 @@
+GPU MINING STATUS - 2025-12-21
+================================
+
+HARDWARE
+--------
+Server: gpu-server (10.0.0.71)
+GPUs: 4x AMD RX 570 4GB
+Total VRAM: 4GB per card
+Driver: amdgpu + Legacy OpenCL (PAL/ORCA)
+
+WORKING COINS
+-------------
+1. ERGO (ERG)
+   - Algorithm: autolykos2
+   - Hashrate: ~4.6 MH/s total
+   - DAG Size: ~1.3 GB (fits in 4GB)
+   - Status: WORKING
+
+NOT WORKING (DAG > 4GB)
+-----------------------
+1. ETC - DAG 4.1GB - TOO BIG
+2. RVN - DAG 5.3GB - TOO BIG
+3. ETH - Moved to PoS - N/A
+4. KASPA - Driver hangs
+
+CURRENT MINING
+--------------
+Coin: Ergo (benchmark mode)
+Service: gpu-miner.service (enabled, auto-start)
+
+TO START REAL MINING
+--------------------
+1. Create Ergo wallet at ergoplatform.org
+2. Edit ~/mining/start-mining.sh
+3. Add your wallet address
+4. sudo systemctl restart gpu-miner
+
+FILES CREATED
+-------------
+- ~/Desktop/Mining/GPU_Mining_Guide.md
+- ~/Desktop/Mining/Wallet_Addresses.md
+- ~/Desktop/Mining/Mining_Status.txt
+
+PROFITABILITY NOTE
+------------------
+With 4GB cards and current crypto prices:
+- Ergo: ~$0.05-0.10/day
+- Electricity likely costs more than earnings
+- Consider upgrading to 6-8GB GPUs for better options
